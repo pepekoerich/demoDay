@@ -7,10 +7,12 @@
     font-weight: 400;
     src: local('Oh Okey'), url('https://fonts.cdnfonts.com/s/97334/OhOkey-2O8rK.woff') format('woff');
 }
-*{
+
+body{
     margin: 0;
     padding: 0;
 }
+
 a{
     text-decoration: none;
 }
@@ -18,7 +20,6 @@ a{
 li{
     list-style: none;
 }
-
 
 .container-header{
     display: flex;
@@ -93,7 +94,6 @@ li{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
     margin-left: 15%;
     margin-bottom: 0px;
 }
@@ -103,6 +103,7 @@ li{
     font-family: 'Oh Okey';
     font-size: 50px;
     color: #982121;
+    margin-top: 50px;
 }
 
 .container-cto > div > p{
@@ -162,3 +163,4 @@ li{
     color: #982121;
     transition: 0.5s;
 }
+
