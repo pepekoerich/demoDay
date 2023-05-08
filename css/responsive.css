@@ -1,0 +1,19 @@
+@media screen and (min-width: 395px) and (max-width: 575px) {
+    #nav-servico .div-servico-custom{
+        margin-top: 6rem!important;
+        
+    }
+}
+@media screen and (min-width: 150px) and (max-width: 400px){
+    #nav-servico .div-servico-custom{
+        margin-top: 10rem!important;
+        
+    }
+}
+
+@media screen and (max-width: 225px){
+    #nav-servico .div-servico-custom{
+        margin-top: 17rem!important;
+        
+    }
+}

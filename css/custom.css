@@ -1,0 +1,50 @@
+#nav-servico img{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+#nav-servico .bg-custom:hover{
+    background-color: #f8f9fa!important;
+    border-radius: 10px;
+}
+
+#nav-servico h3{
+    margin-top: 0.7rem;
+   
+}
+
+#nav-servico a:hover{
+    color: #007bff!important;
+}
+
+#header .div-header-custom{
+    background-color: white;
+}
+
+#hero img{
+    width: 100%;
+    
+}
+
+#card-perfis img{
+  height: 70px;
+  width: 70px;
+}
+
+#myCarousel .carousel-item{
+    height: 40em;
+    background-color: #777;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+#myCarousel .container{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}

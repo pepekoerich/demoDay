@@ -1,114 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Faz 1 Freela</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faz 1 Freela</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <main>
-        <header id="topo" class="container-header">
-            
-                <a href="home.html"><img src="" alt="" srcset="">Faz 1 Freela</a>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="div-header-custom container-fluid fixed-top border-bottom">
+      <header class="d-flex flex-wrap align-content-center py-4 mb-2">
+        <a href="/home.html"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <img src="assets/icons8-salt-bae-50.png" alt="">
+          <span class="fs-4">Faz 1 FreeLá</span>
+        </a>
 
-                <ul class="menu-header">
-                    <li><a href="login.html" target="_blank" rel="noopener noreferrer">Login</a></li>
-                    <li><a href="cadastro.html" target="_blank" rel="noopener noreferrer">Cadastro</a></li>
-                    <li><a href="contato.html" target="_blank" rel="noopener noreferrer">Contato</a></li>
-                </ul>
-            
-        </header>
+        <ul class="nav nav-pills align-self-center align-content-center">
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Cadastro</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Fale Conosco</a></li>
+        </ul>
+      </header>
+    </div>
+  </header>
+  <!-- HEADER -->
 
-        <nav class="nav-servico">
-            <ul>
-                <li><a href=""></a>COZINHEIROS</li>
-                <li><a href=""></a>GARÇONS</li>
-                <li><a href=""></a>AUXILIARES</li>
-                <li><a href=""></a>BARISTAS</li>
-                <li><a href=""></a>CHEF'S</li>
-            </ul>
-        </nav>
-
-        <div class="container-cto">
-
-            <div>
-                <h1>
-                    Encontre o profissional ideal
-                    para o seu evento
-                </h1>
-                <p> <br><br> Aqui no Faz 1 Freela temos uma diversidade de perfis <br> para o seu evento ou restaurante, <br> bora dar um buscar!</p>
-            </div>
-            <div class="div-image">
-                <img src="https://img.freepik.com/vetores-gratis/chefdesign-colorido_1152-72.jpg?w=826&t=st=1682567788~exp=1682568388~hmac=4f7fd99380bd53433d15686525ceafa4c6b2170a3fcddc3b27da8991e896aceb" alt="imgCozinheiro">
-            </div>
-            
+  <!-- NAV-SERVIÇOS -->
+  <nav id="nav-servico" class="">
+    <div class="container-fluid px-5 py-5 mt-sm-5 mt-5 div-servico-custom" id="icon-grid">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-3 mt-sm-2">
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-coffee-50 (1).png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Baristas</h3>
+            <a class="text-decoration-none nav-link link-body-emphasis" href="">Já pensou em ter aquele café especial pro seu evento?</a>
+          </div>
         </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-salt-bae-50.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Cozinheiros</h3>
+            <a class="text-decoration-none nav-link" href="">Aqui eles têm muitas especialiadades, vem conferir!</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-drink-50.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Mixologistas</h3>
+            <a class="text-decoration-none nav-link" href="">Temos uma gama de drinks e coquetéis esperando você !</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-chef-50.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Chef's</h3>
+            <a class="text-decoration-none nav-link" href="">Precisa de Chef qualificado para liderar seu evento, Vem ver!</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-croissant-50.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Confeiteiros</h3>
+            <a class="text-decoration-none nav-link" href="">Doces, bolos, entremets, croissants? Qual você vai querer?</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-aux-cable-32.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Auxiliares</h3>
+            <a class="text-decoration-none nav-link" href="">Quem não precisa daquela mãozinha, naquele evento hein?!</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-food-service-50.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Garçons</h3>
+            <a class="text-decoration-none nav-link" href="">Os melhores atendentes de mesa, aqui mesmo!</a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start bg-custom">
+          <img class="align-self-center m-2" src="assets/icons8-bread-50.png" alt="">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4">Padeiros</h3>
+            <a class="text-decoration-none nav-link" href="">Pão quentinho, fermentação natural, ja sinto o cheiro daqui!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- NAV-SERVIÇOS -->
+  <!-- HERO -->
+  <main id="hero">
+    <div class="container col-xxl-8 px-4">
+      <div class="row flex-lg-row-reverse align-items-center g-5">
+        <div class="col-10 col-sm-8 col-lg-6 py-3">
+          <img class="img-fluid border rounded-3 shadow-lg" src="assets/food&beverage.jpg"
+            class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1">Chefs, Confeiteiros ou Garçons?</h1>
+          <p class="lead">Aqui temos diversos serviços do ramo A&B, profissionais capacitados para dar um UP! no seu
+            evento ou restaurante. Somos a plataforma que vai facilitar e muito a sua jornada na gastronomia, não perca
+            tempo e clica! </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a class="btn btn-primary btn-lg px-4 me-md-2" href=""> BUSQUE UM PROFISSIONAL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- HERO -->
+  <!-- SEARCHBAR -->
+  <div id="search-bar">
+    <div class="container-fluid border-bottom">
+      <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-md-6">
+          <form class="form-inline">
+            <div class="input-group shadow-lg">
+              <span class="input-group-text" id="addon-wrapping"><img src="assets/icons8-lup-35.png" alt="lupa"></span>
+              <input type="text" class="form-control" placeholder="Pesquisar...">
+              <div class="input-group-append">
+                <button class="btn btn-primary btn-lg rounded-start-1 rounded-end-1" type="submit"
+                  style="height:49px;">Buscar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SEARCHBAR -->
+  <div style="height: 100px;"></div>
+  <!-- HERO-PROFISSIONAIS -->
+  <div id="hero-profissionais">
+    <div class="px-4 pt-4 my-5 text-center border-bottom mt-5">
+      <h1 class="display-4 fw-bold text-body-emphasis">Seja um Profissional!</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">E aí buscando se inserir no mercado de trabalho? Temos a solução para você. Uma plataforma cheia de gente querendo o seu trabalho! Se cadastra e se joga, vai!</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Faz1FreeLá</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 40vh;">
+        <div class="container px-5">
+          <img src="assets/aaron-blanco-tejedor-I0xbweg06KU-unsplash.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- HERO-PROFISSIONAIS -->
+  <!-- CARD-PERFIS -->
+  <div id="card-perfis">
+    <div class="container px-4 py-4" id="featured-3">
+      <h2 class="pb-2 border-bottom">Faz1FreeLá Recomenda</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-4">
+            <span class="badge d-flex align-items-center p-1 pe-4 text-secondary-emphasis shadow border rounded-pill">
+              <img class="rounded-circle me-1" width="70" height="70" src="assets/profile-pic-male.png" alt="">Felipe
+              Donato
+            </span>
+          </div>
+          <h3 class="fs-2">Chef de Cozinha</h3>
+          <p>Há 15 anos no mercado da gastronomia, já trabalhei em diversos lugares, hoje atuo como freelancer e estou
+            pronto para trazer o melhor para seu evento!</p>
+          <a href="#" class="icon-link">
+            Ver Perfil
+            <svg class="bi">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-4">
+            <span class="badge d-flex align-items-center p-1 pe-4 text-secondary-emphasis shadow border rounded-pill">
+              <img class="rounded-circle me-1" width="24" height="24" src="assets/profile-pic.png" alt="">Marcela Silva
+            </span>
+          </div>
+          <h3 class="fs-2">Confeiteira</h3>
+          <p>Me especializei em cólegios na França, e hoje retorno ao Brasil para trazer as receitas que aprendi lá e
+            fazer um ótimo trabalho.</p>
+          <a href="#" class="icon-link">
+            Ver Perfil
+            <svg class="bi">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-4">
+            <span
+              class="badge d-flex align-items-center p-1 pe-4 text-secondary-emphasis shadow border border-secondary-subtle rounded-pill">
+              <img class="rounded-circle me-1" width="24" height="24" src="assets/profile-pic-male2.png" alt="">Allan
+              Delon
+            </span>
+          </div>
+          <h3 class="fs-2">Barista</h3>
+          <p>Cafés especiais são comigo mesmo. Sou apaixonado pelo que faço e tenho certeza que você vai gostar do que
+            faço.</p>
+          <a href="#" class="icon-link">
+            Ver Perfil
+            <svg class="bi">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CARD-PERFIS -->
 
-        <div class="container-search">
-            <label for="search-bar"></label>
-            <img src="icons8-lup-64.png" alt="">
-            <input type="text" placeholder="  Busque um serviço">
-            <button type="submit">Buscar</button>
-        </div>
+  <!-- CARROUSEL -->
 
-        <section class="section-servico">
-            <h2>Principais Serviços Buscados</h2>
-        </section>
-        <div class="container-servico">
-            <div class="container-image-servico">
-                <img src="" alt="">
-                <h3>Tipo de serviço</h3>
-                <a href="">Visitar Perfis</a>
-            </div>
-            <div class="container-image-servico">
-                <img src="" alt="">
-                <h3>Tipo de serviço</h3>
-                <a href="">Visitar Perfis</a>
-            </div>
-            <div class="container-image-servico">
-                <img src="" alt="">
-                <h3>Tipo de serviço</h3>
-                <a href="">Visitar Perfis</a>
-            </div>
+  <div id="myCarousel" class="carousel slide mb-5 py-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url(assets/barista.jpg);">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h2 class="fs-1">BARISTAS</h2>
+            <p class="fs-4">Baristas, os mestres dos aromas e sabores, transformam café em poesia líquida. São verdadeiros magos dos grãos. </p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver Perfis</a></p>
+          </div>
         </div>
-        <section>
-            <h2>Veja o que estão falando sobre</h2>
-            <p>Aqui um texto explicando o h2</p>
-        </section>
-        <div>
-            <div>
-                <img src="" alt="">
-                <p>Aqui um feedback</p>
-                <h4>Nome de quem publicou/serviço contratado</h4>
-            </div>
-            <div>
-                <img src="" alt="">
-                <p>Aqui um feedback</p>
-                <h4>Nome de quem publicou/serviço contratado</h4>
-            </div>
-            <div>
-                <img src="" alt="">
-                <p>Aqui um feedback</p>
-                <h4>Nome de quem publicou/serviço contratado</h4>
-            </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(assets/confeitaria.jpg);">
+        <div class="container">
+          <div class="carousel-caption">
+            <h2 class="fs-1">CONFEITEIRAS</h2>
+            <p class="fs-4">Confeiteiros, os artesãos dos doces, transformam ingredientes simples em obras de arte açucaradas, encantando paladares com suas criações deliciosas.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver Perfis</a></p>
+          </div>
         </div>
-        <footer class="container-header">
-            
-                <a href="home.html" ><img src="" alt="" srcset="">Faz 1 Freela</a>
-            
-            
-                <ul class="menu-header">
-                    <li><a href="login.html" target="_blank">Login</a></li>
-                    <li><a href="cadastro.html"" target="_blank">Cadastro</a></li>
-                    <li><a href="contato.html"" target="_blank">Contato</a></li>
-                </ul>
-           
-            <div>
-                <button type="button"><img src="" alt=""> Voltar ao topo</button>
-            </div>
-        </footer>
-    </main>
+      </div>
+      <div class="carousel-item" style="background-image: url(assets/mixologista.jpg);">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h2 class="fs-1">MIXOLOGISTAS</h2>
+            <p class="fs-4">Os mixologistas são verdadeiros artistas da coquetelaria, criando experiências inesquecíveis através de suas misturas e harmonizações de sabores.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Ver Perfis</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url(assets/barista.jpg);">
+        <div class="container">
+          <h2>Exemplo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ab nobis impedit quae consequuntur odio aut perferendis optio tenetur voluptate libero sapiente id neque, adipisci cumque autem est delectus dolorum!</p>
+          <a href="# " class="btn btn-lg btn-primary">
+            Visitar Perfil
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(assets/mixologista.jpg);" >
+        <div class="container">
+          <h2>Exemplo2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ab nobis impedit quae consequuntur odio aut perferendis optio tenetur voluptate libero sapiente id neque, adipisci cumque autem est delectus dolorum!</p>
+          <a href="# " class="btn btn-lg btn-primary">
+            Visitar Perfil
+          </a>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(assets/confeitaria.jpg);">
+        <div class="container">
+          <h2>Exemplo3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ab nobis impedit quae consequuntur odio aut perferendis optio tenetur voluptate libero sapiente id neque, adipisci cumque autem est delectus dolorum!</p>
+          <a href="# " class="btn btn-lg btn-primary">
+            Visitar Perfil
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+</div> -->
+  <!-- CARROUSEL -->
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="container-fluid">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© Faz1FreeLá direitos reservados 2023.</p>
+
+        <a href="/"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Login</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Cadastro</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Fale Conosco</a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
