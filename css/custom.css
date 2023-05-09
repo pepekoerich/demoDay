@@ -1,18 +1,14 @@
 #nav-servico img{
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: auto;
 }
 
 #nav-servico .bg-custom:hover{
-    background-color: #f8f9fa!important;
-    border-radius: 10px;
-    color: #007bff!important;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    color: #007bff;
 }
 
-#nav-servico h3{
-    margin-top: 0.7rem;
-   
-}
 
 #header .div-header-custom{
     background-color: white;
