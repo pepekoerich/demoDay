@@ -1,6 +1,6 @@
 #nav-servico img{
-    width: 3em;
-    height: auto;
+    width: 2em;
+    height: 2em;
 }
 
 #nav-servico .bg-custom:hover{
@@ -8,15 +8,8 @@
     border-radius: 15px;
     color: #007bff;
 }
-
-
-#header .div-header-custom{
-    background-color: white;
-}
-
-#hero img{
-    width: 100%;
-    
+#nav-servico .bg-custom{
+    height: 90px;
 }
 
 #card-perfis img{

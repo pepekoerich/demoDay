@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faz 1 Freela</title>
+  <title>TasteHub</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -13,113 +13,129 @@
 </head>
 
 <body>
+
   <!-- HEADER -->
   <header id="header">
-    <div class="div-header-custom container-fluid fixed-top border-bottom bg-body-tertiary">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
-        <a href="/home.html"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <img class="bi me-2" src="assets/icons8-salt-bae-50.png" alt="">
-          <span class="fs-4">Faz 1 FreeLá</span>
+    <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom">
+      <div class="container-fluid">
+
+        <a href="#" class="navbar-brand">
+          <img src="assets/logo-legal.png" alt="logo" class="img-fluid"
+            style="width: 50px; height: auto; border-radius: 50%;">TasteHub
         </a>
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Cadastro</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Fale Conosco</a></li>
-        </ul>
-      </header>
-    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end px-3" id="navbarSupportedContent">
+
+          <form role="search" class="d-flex input-group-sm text-center" style="width: 250px;">
+            <input type="search" class="form-control me-2" placeholder="Pesquisar...">
+            <button class="btn-sm btn-primary btn"><a href="#algumlugar.html"></a>Buscar</button>
+          </form>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contato</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
   </header>
   <!-- HEADER -->
 
- <!-- NAV-SERVIÇOS -->
- <nav id="nav-servico" class="">
-  <div class="container px-5 py-5 mt-sm-5 mt-5 div-servico-custom" id="icon-grid">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-3 mt-sm-2">
-      <div class="col d-flex bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-coffee-50 (1).png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Baristas</h3>
-          <a class="text-decoration-none nav-link" href="">Que tal aquele café especial em seu evento?</a>
+  <!-- NAV-SERVIÇOS -->
+  <nav id="nav-servico">
+    <div class="container d-flex justify-content-center text-center div-servico-custom mb-5 mt-5">
+      <div class="row row-cols-2 row-cols-sm-4 row-cols-md-4 px-5">
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img src="assets/icons8-coffee-50 (1).png" alt="barista" srcset="">
+            <h6>Baristas</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-salt-bae-50.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Cozinheiros</h3>
-          <a class="text-decoration-none nav-link" href="">Aqui eles têm muitas especialiadades, vem conferir.</a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center ">
+          <a class="nav-link" href="#">
+            <img src="assets/icons8-chef-50.png" alt="cozinheiro" srcset="">
+            <h6>Cozinheiros</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-drink-50.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Mixologistas</h3>
-          <a class="text-decoration-none nav-link" href="">Uma gama de drinks e coquetéis esperando você.</a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img class="" src="assets/icons8-croissant-50.png" alt="garçon" srcset="">
+            <h6>Confeiteiras</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-chef-50.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Chef's</h3>
-          <a class="text-decoration-none nav-link" href="">Chef's qualificados para liderar seu evento ou restaurante.</a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img src="assets/icons8-bread-50.png" alt="padeiro" srcset="">
+            <h6>Padeiras</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-croissant-50.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Confeiteiros</h3>
-          <a class="text-decoration-none nav-link" href="">Doces, bolos ou entremets. Qual você vai querer?</a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img src="assets/icon-cook.png" alt="chefs" srcset="">
+            <h6>Chef's</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-aux-cable-32.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Auxiliares</h3>
-          <a class="text-decoration-none nav-link" href="">Que tal aquela mãozinha naquele evento, hein?!</a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img src="assets/icons8-drink-50.png" alt="drinks" srcset="">
+            <h6>Mixologistas</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-food-service-50.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Garçons</h3>
-          <a class="text-decoration-none nav-link" href="">Os melhores atendentes de mesa, aqui mesmo.</a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img src="assets/icons8-food-service-50.png" alt="croissant" srcset="">
+            <h6>Garçons</h6>
+          </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start bg-custom">
-        <img class="align-self-center m-2" src="assets/icons8-bread-50.png" alt="">
-        <div>
-          <h3 class="fw-bold mb-0 fs-4">Padeiros</h3>
-          <a class="text-decoration-none nav-link" href="">Brioches, fermentação natural, massas e pizzas. </a>
+        <div class="col bg-custom d-flex justify-content-center align-items-center">
+          <a class="nav-link" href="#">
+            <img src="assets/icons8-aux-cable-32.png" alt="aux" srcset="">
+            <h6>Auxiliares</h6>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-</nav>
-<!-- NAV-SERVIÇOS -->
+  </nav>
+  <!-- NAV-SERVIÇOS -->
   <!-- HERO -->
   <main id="hero">
     <div class="container col-xxl-8 px-4">
-      <div class="row flex-lg-row-reverse align-items-center g-5">
-        <div class="col-10 col-sm-8 col-lg-6 py-3">
-          <img src="assets/food&beverage.jpg" class="d-block mx-lg-auto img-fluid border rounded-3 shadow-lg" alt="Bootstrap Themes" loading="lazy">
+      <div class="row flex-lg-row-reverse align-items-center flex-md-row-reverse g-5 mt-5">
+        <div class="col col-md-6 col-sm-8 col-lg-6">
+          <img src="assets/redimensionada.jpg" class="d-block mx-lg-auto img-fluid border rounded-3 shadow-lg"
+            alt="Bootstrap Themes" loading="lazy">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1">Chefs, Confeiteiros ou Garçons?</h1>
           <p class="lead">Aqui temos diversos serviços do ramo A&B, profissionais capacitados para dar um up no seu
             evento ou restaurante. Somos a plataforma que vai facilitar, e muito, a sua jornada na gastronomia, não
             perca
             tempo e clique! </p>
-          </div>
         </div>
       </div>
+    </div>
     </div>
   </main>
   <!-- HERO -->
   <!-- SEARCHBAR -->
   <div id="search-bar">
-    <div class="container-fluid border-bottom">
+    <div class="container border-bottom">
       <div class="row justify-content-center mt-5 mb-5">
         <div class="col-md-6">
           <form class="form-inline">
@@ -137,23 +153,25 @@
     </div>
   </div>
   <!-- SEARCHBAR -->
-  <div style="height: 100px;"></div>
+  <div style="height: 21px;"></div>
   <!-- HERO-PROFISSIONAIS -->
   <div id="hero-profissionais">
-    <div class="px-4 pt-4 my-5 text-center border-bottom mt-5">
+    <div class="px-4 pt-5 text-center border-bottom">
       <h1 class="display-4 fw-bold text-body-emphasis">Seja um Profissional.</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">E aí, buscando se inserir no mercado de trabalho? Temos a solução para você. Uma
           plataforma
           cheia de gente querendo o seu trabalho. Se cadastra e se joga, vai!</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Faz1FreeLá</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Saiba Mais</button>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"><a
+              href="cadastro.html"></a>Cadastre-se</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="faqs.html"></a> Saiba
+            Mais</button>
         </div>
       </div>
       <div class="overflow-hidden" style="max-height: 40vh;">
-        <div class="container px-5">
-          <img src="assets/seja-profissional.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+        <div class="container px-lg-5">
+          <img src="assets/seja-profissional.jpg" class="img-fluid border rounded-3 shadow" alt="Example image"
             width="700" height="auto" loading="lazy">
         </div>
       </div>
@@ -161,10 +179,10 @@
   </div>
   <!-- HERO-PROFISSIONAIS -->
   <!-- CARD-PERFIS -->
-  <div id="card-perfis">
-    <div class="container px-4 py-4" id="featured-3">
+  <div id="card-perfis" class="m-5">
+    <div class="container px-5 py-5" id="featured-3">
       <h2 class="pb-2 border-bottom">Faz1FreeLá Recomenda</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="row g-4 pt-3 row-cols-1 row-cols-lg-3">
         <div class="feature col">
           <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-4">
             <span class="badge d-flex align-items-center p-1 pe-4 text-secondary-emphasis shadow border rounded-pill">
@@ -185,7 +203,7 @@
         <div class="feature col">
           <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-4">
             <span class="badge d-flex align-items-center p-1 pe-4 text-secondary-emphasis shadow border rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="assets/profile-pic.png" alt="">Marcela
+              <img class="rounded-circle me-1" width="70" height="70" src="assets/profile-pic.png" alt="">Marcela
               Silva
             </span>
           </div>
@@ -203,7 +221,7 @@
           <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-4">
             <span
               class="badge d-flex align-items-center p-1 pe-4 text-secondary-emphasis shadow border border-secondary-subtle rounded-pill">
-              <img class="rounded-circle me-1" width="24" height="24" src="assets/profile-pic-male2.png" alt="">Allan
+              <img class="rounded-circle me-1" width="70" height="70" src="assets/profile-pic-male2.png" alt="">Allan
               Delon
             </span>
           </div>
