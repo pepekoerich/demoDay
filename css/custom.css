@@ -1,28 +1,41 @@
-#nav-servico img{
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* html,body{
+    min-height: 100%;
+} */
+/* nav-serviços/home */
+#nav-servico img {
     width: 2em;
     height: 2em;
 }
 
-#nav-servico .bg-custom:hover{
+#nav-servico .bg-custom:hover {
     background-color: #f8f9fa;
     border-radius: 15px;
     color: #007bff;
 }
-#nav-servico .bg-custom{
+
+#nav-servico .bg-custom {
     height: 90px;
 }
 
-#nav-servico{
+#nav-servico {
     margin-top: 5rem;
     padding-top: 1rem;
 }
 
-#card-perfis img{
-  height: 70px;
-  width: 70px;
+/* card-perfis/home */
+#card-perfis img {
+    height: 70px;
+    width: 70px;
 }
 
-#myCarousel .carousel-item{
+#card-perfis .feature-icon {
+    width: 100px;
+}
+
+/* caroulsel/home */
+#myCarousel .carousel-item {
     height: 30em;
     background-color: #3b3a3a;
     color: white;
@@ -30,7 +43,7 @@
     font-weight: bold;
 }
 
-.overlay-image{
+.overlay-image {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -41,35 +54,74 @@
     opacity: .45;
 }
 
-#card-perfis .feature-icon{
-    width: 100px;
-}
-
-#cadastro .cadastro-custom{
+/* tela cadastro/cadastro */
+#cadastro .cadastro-custom {
     max-width: 500px;
     margin-top: 7rem;
 }
 
-#login .cadastro-custom{
+#login .cadastro-custom {
     max-width: 500px;
     margin-top: 7rem;
 }
 
-.form-custom{
+.form-custom {
     margin-left: 0.54rem;
 }
 
-.form-custom label{
+.form-custom label {
     padding-left: 0.4rem;
 }
 
-.email-custom{
+.email-custom {
     margin-top: 2.7rem;
 }
 
-@media (max-width: 768px) {
-    #header .btn-custom{
+
+/* query */
+@media screen and (max-width: 768px) {
+    #header .btn-custom {
         margin-top: 1rem;
-        
+
     }
+    #card-user-profissional .card-custom{
+        max-width: 260px!important;
+        margin-top: 1rem!important;
+    }
+    #curriculum-user .bio-custom{
+        max-width: 236px!important;
+        margin-top: 13rem!important;
+        margin-bottom: 4rem;
+    }
+
+    #main-perfil-profissional .sidebar-custom{
+        height: 100vh!important;
+    }
+
+    #fotos-profissional .carousel-custom{
+        max-width: 350px!important;
+        margin-left: 7.5rem!important;
+    }
+}
+
+/* sidebar/perfil-profissional */
+
+
+/* card-user-profissional */
+
+#card-user-profissional .card-custom{
+    margin-right: auto;
+    margin-left: 6.5rem;
+    margin-top: 3.45rem;
+   
+}
+
+#curriculum-user .bio-custom{
+    margin-left: 6.5rem;
+    margin-right: auto;
+    
+}
+
+#fotos-profissional .custom-carousel{
+    padding-right: 10rem;
 }
