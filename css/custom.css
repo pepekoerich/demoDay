@@ -1,8 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-/* html,body{
-    min-height: 100%;
-} */
 /* nav-serviços/home */
 #nav-servico img {
     width: 2em;
@@ -54,7 +51,7 @@
     opacity: .45;
 }
 
-/* tela cadastro/cadastro */
+/* tela cadastro/login */
 #cadastro .cadastro-custom {
     max-width: 500px;
     margin-top: 7rem;
@@ -77,51 +74,17 @@
     margin-top: 2.7rem;
 }
 
-
 /* query */
 @media screen and (max-width: 768px) {
     #header .btn-custom {
         margin-top: 1rem;
-
-    }
-    #card-user-profissional .card-custom{
-        max-width: 260px!important;
-        margin-top: 1rem!important;
-    }
-    #curriculum-user .bio-custom{
-        max-width: 236px!important;
-        margin-top: 13rem!important;
-        margin-bottom: 4rem;
-    }
-
-    #main-perfil-profissional .sidebar-custom{
-        height: 100vh!important;
-    }
-
-    #fotos-profissional .carousel-custom{
-        max-width: 350px!important;
-        margin-left: 7.5rem!important;
     }
 }
 
-/* sidebar/perfil-profissional */
 
+
+/* user-bar/perfil-profissional */
+
+    
 
 /* card-user-profissional */
-
-#card-user-profissional .card-custom{
-    margin-right: auto;
-    margin-left: 6.5rem;
-    margin-top: 3.45rem;
-   
-}
-
-#curriculum-user .bio-custom{
-    margin-left: 6.5rem;
-    margin-right: auto;
-    
-}
-
-#fotos-profissional .custom-carousel{
-    padding-right: 10rem;
-}

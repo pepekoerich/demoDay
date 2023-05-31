@@ -7,3 +7,28 @@
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+function formatarValor(input) {
+    // Remove caracteres não numéricos
+    let valor = input.value.replace(/\D/g, '');
+  
+    // Divide em partes inteiras e decimais
+    let inteiro = valor.slice(0, -2);
+    let decimal = valor.slice(-2);
+  
+    // Adiciona separador de milhar
+    inteiro = inteiro.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+  
+    // Formata o valor com vírgula para os centavos
+    input.value = `${inteiro},${decimal}`;
+  }
+
+  function abrirModal() {
+    var modal = document.getElementById('modalSheet');
+    modal.style.display = 'block';
+  }
+  
+  function fecharModal() {
+    var modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
