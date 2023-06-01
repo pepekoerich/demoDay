@@ -14,79 +14,85 @@
 
 <body>
 
-    <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog"
-        id="modalSheet">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content rounded-4 shadow">
-                <div class="modal-header border-bottom-0">
-                    <h1 class="modal-title fs-5">Proposta</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body py-0">
-                    <p>Conte um pouco mais sobre o seu evento:</p>
-                    <div class="row">
-                        <form action="#">
-                            <div class="mb-3 mt-3">
-                                <label for="date" class="form-label">Data:</label>
-                                <input type="date" class="form-control" id="date">
-                            </div>
-                            <div class="mb-3 mt-3">
-                                <label for="segmento" class="form-label">Segmento:</label>
-                                <input type="text" class="form-control"
-                                    placeholder="Ex: Aniversário, Casamento, Restaurante..." id="segmento">
-                            </div>
-                            <div class="mb-3 mt-3">
-                                <label for="descricao" class="form-label">Descrição:</label>
-                                <textarea class="form-control" rows="4  " id="comment"
-                                    placeholder="Escreva detalhadamente o serviço proposto, como quantidade de pessoas, cardápio, necessidade de utensílios e equipamentos..."
-                                    name="text"></textarea>
-                            </div>
+    
+    <div class="modal modal-sheet position-static d-block p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet">
+        <div class="modal-dialog" role="document" id="modal-proposta">
+                <dialog id="show-hide-modal" class="border-0 rounded-4 shadow px-0 py-0">
+                    <div class="modal-content rounded-4 shadow" style="min-width: 560px;">
+                        <div class="modal-header border-bottom-0">
+                            <h1 class="modal-title fs-5">Proposta</h1>
+                            <button type="button" class="btn-close" id="btn-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body py-0">
+                            <p>Conte um pouco mais sobre o seu evento:</p>
+                            <div class="row">
+                                <form action="/proposta" method="POST" class="form-group">
+                                    <div class="mb-3 mt-3">
+                                        <label for="date" class="form-label">Data:</label>
+                                        <input type="date" class="form-control" id="date" required>
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="segmento" class="form-label">Segmento:</label>
+                                        <input type="text" class="form-control"
+                                            placeholder="Ex: Aniversário, Casamento, Restaurante..." id="segmento"
+                                            required>
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="descricao" class="form-label">Descrição:</label>
+                                        <textarea class="form-control" rows="4  " id="comment"
+                                            placeholder="Escreva detalhadamente o serviço proposto, como quantidade de pessoas, cardápio, necessidade de utensílios e equipamentos..."
+                                            name="text" required></textarea>
+                                    </div>
 
-                            <div class="row justify-content-between">
-                                <div class="col-md-4 col-4 mt-1 py-1">
-                                    <label for="estado" class="form-label">Estado</label>
-                                    <select class="form-select" id="estado" required="true">
-                                        <option>SC</option>
-                                        <option>PR</option>
-                                        <option>RS</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4 col-9 mt-1 py-1">
-                                    <label for="cidade" class="form-label">Cidade</label>
-                                    <select class="form-select" id="cidade" required="true">
-                                        <option>Florianópolis</option>
-                                        <option>São José</option>
-                                        <option>Biguaçu</option>
-                                        <option>Palhoça</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4 col-9 mt-1 py-1">
-                                    <label for="bairro" class="form-label">Bairro</label>
-                                    <select class="form-select" id="bairro" required="">
-                                        <option>Agronômica</option>
-                                        <option>Trindade</option>
-                                        <option>Itacorubi</option>
-                                    </select>
-                                </div>
-                            </div>
+                                    <div class="row justify-content-lg-around" id="localidade">
+                                        <div class="col-md-2 col-4 mt-1 py-1">
+                                            <label for="estado" class="form-label">Estado</label>
+                                            <select class="form-select" id="estado" required>
+                                                <option>SC</option>
+                                                <option>PR</option>
+                                                <option>RS</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-5 col-9 mt-1 py-1">
+                                            <label for="cidade" class="form-label">Cidade</label>
+                                            <select class="form-select" id="cidade" required>
+                                                <option>Florianópolis</option>
+                                                <option>São José</option>
+                                                <option>Biguaçu</option>
+                                                <option>Palhoça</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-5 col-9 mt-1 py-1">
+                                            <label for="bairro" class="form-label">Bairro</label>
+                                            <select class="form-select" id="bairro" required>
+                                                <option>Agronômica</option>
+                                                <option>Trindade</option>
+                                                <option>Itacorubi</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-                            <div class="text mt-3">
-                                Proposta
+                                    <div class="text mt-3">
+                                        Proposta
+                                    </div>
+                                    <div class="input-group mb-3 mt-2 px-">
+                                        <span class="input-group-text">$</span>
+                                        <label for="segmento" class="form-label"></label>
+                                        <input type="text" class="form-control" id="valorInput" maxlength="9"
+                                            oninput="formatarValor(this)"
+                                            placeholder="Digite um valor contábil em reais" required>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="input-group mb-3 mt-2">
-                                <span class="input-group-text">$</span>
-                                <label for="segmento" class="form-label"></label>
-                                <input type="text" class="form-control" id="valorInput" maxlength="9" oninput="formatarValor(this)" placeholder="Digite um valor contábil em reais" required>
-                            </div>
-                        </form>
+                        </div>
+                        <div class="modal-footer flex-column align-items-center w-100 gap-2 pb-3 border-top-0">
+                            <input type="submit" value="Enviar Proposta" name="proposta" class="btn btn-primary fs-5">
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
-                    <button type="button" class="btn btn-lg btn-primary">Enviar Proposta</button>
-                </div>
-            </div>
+                </dialog>
         </div>
     </div>
+
 
 
 

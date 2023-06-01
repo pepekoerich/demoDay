@@ -23,12 +23,9 @@ function formatarValor(input) {
     input.value = `${inteiro},${decimal}`;
   }
 
-  function abrirModal() {
-    var modal = document.getElementById('modalSheet');
-    modal.style.display = 'block';
-  }
-  
-  function fecharModal() {
-    var modal = document.getElementById('modal');
-    modal.style.display = 'none';
-  }
+
+
+
+
+
+
