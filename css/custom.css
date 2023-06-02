@@ -118,7 +118,7 @@ small {
 
 #carousel-perfil .carousel-item{
     height: 30em;
-    background-color: #3b3a3a;
+    /* background-color: lightslategrey; */
     color: white;
     position: relative;
 }
@@ -130,7 +130,17 @@ small {
     top: 0;
     left: 0;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: .85;
-    background-image: url(assets/barista.jpg);
+}
+
+#avaliacao .card-body{
+    max-height: 160px!important;
+    min-height: 160px!important;
+    
+}
+
+#carousel-perfil p{
+    color: white;
 }
