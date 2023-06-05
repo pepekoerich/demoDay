@@ -116,6 +116,14 @@
     #search-bar{
         margin-top: 3rem;
     }
+
+    #pre-cadastro-div{
+        margin-top: 4rem!important;
+    }
+
+    #pre-cadastro-div p{
+        font-size: 1.65rem;
+    }
 }
 /* query */
 
@@ -176,5 +184,16 @@ small {
 }
 /* carousel-perfil */
 
+#image-cadastro{
+    object-fit: cover;
+    transition: 0.5s;
+    opacity: 0.85;
+}
 
+#image-cadastro:hover{
+    transform: scale(1.1);
+}
 
+#pre-cadastro-div{
+    margin-top: 6rem;
+}
