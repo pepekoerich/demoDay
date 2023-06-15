@@ -21,35 +21,99 @@
                     <div class="row">
 
                         <div class="col-lg-12">
-                            <p class="display-4 fst-italic">Editar Perfil</p>
+                            <p class="display-4 fst-italic">Editar Perfil Profissional</p>
                         </div>
 
                         <div class="col-lg-12">
                             <div class="form-floating mb-3">
-                                <input type="nome" class="form-control" id="nome-cliente" placeholder="Nome">
+                                <input type="nome" class="form-control" id="nome-profissional" placeholder="Nome">
                                 <label for="nome-cliente">Nome</label>
                             </div>
                         </div>
 
                         <div class="col-lg-12">
                             <div class="form-floating mb-3">
-                                <input type="sobrenome" class="form-control" id="sobrenome-cliente"
-                                    placeholder="Password">
+                                <input type="sobrenome" class="form-control" id="sobrenome-profissional"
+                                    placeholder="Sobrenome">
                                 <label for="sobrenome-cliente">Sobrenome</label>
                             </div>
                         </div>
 
                         <div class="col-lg-12">
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Crie sua bio" id="bio-cliente"
+                                <textarea class="form-control" placeholder="Crie sua bio" id="bio-profissional"
                                     style="height: 100px"></textarea>
-                                <label for="floatingBio">Bio</label>
+                                <label for="bio-profissional">Bio</label>
                             </div>
                         </div>
 
                         <div class="col-lg-12">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" placeholder="Número" id="cel-cliente"
+                                <textarea class="form-control" placeholder="Crie suas Tags"
+                                    id="tags-profissional"></textarea>
+                                <label for="tags-profissional">#Tags</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mb-3">
+                            <hr>
+                        </div>
+
+                        <!-- EXPERIENCIA-PROFISSIONAL -->
+
+                        <div class="col-lg-10 col-md-9 col-sm-6 col-12">
+                            <p class="fst-italic fw-semibold fs-5">Experiência Profissional</p>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6 col-12 d-flex justify-content-start justify-content-sm-end">
+                            <button class="btn btn-primary mb-3" disabled>Adicionar</button>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="local" class="form-control" id="local-profissional" placeholder="Local">
+                                <label for="local-profissional">Local</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="cargo" class="form-control" id="cargo-profissional" placeholder="Cargo">
+                                <label for="cargo-profissional">Cargo</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="inicio-profissional" placeholder="Início">
+                                <label for="inicio-profissional">Início</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="termino-profissional" placeholder="Término">
+                                <label for="termino-profissional">Término</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Descrição"
+                                    id="descricao-profissional"></textarea>
+                                <label for="descricao-profissional">Descrição</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mb-3">
+                            <hr>
+                        </div>
+
+                        <!-- EXPERIENCIA-PROFISSIONAL -->
+
+                        <div class="col-lg-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder="Número" id="cel-profissional"
                                     oninput="formatPhoneNumber(this)" maxlength="15"></input>
                                 <label for="number">Número Celular</label>
                             </div>
@@ -107,13 +171,11 @@
                         </div>
 
                         <div class="col-lg-1 d-flex align-items-center justify-content-evenly rounded-circle">
-
                             <a href="perfil-cliente.html">
                                 <i class="bi bi-save2" style="font-size: 45px;" data-bs-toggle="tooltip"
                                     data-bs-placement="bottom" data-bs-original-title="Salvar">
                                 </i>
                             </a>
-
                         </div>
 
                     </div>
