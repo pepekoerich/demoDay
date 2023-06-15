@@ -23,8 +23,110 @@ function formatarValor(input) {
     input.value = `${inteiro},${decimal}`;
   }
 
+function formatPhoneNumber(input) {
+    // Remove todos os caracteres que não sejam dígitos
+    var phoneNumber = input.value.replace(/\D/g, '');
+
+    // Verifica o tamanho do número de telefone
+    var phoneNumberLength = phoneNumber.length;
+
+    // Formatação do número de telefone
+    if (phoneNumberLength > 0) {
+      phoneNumber = phoneNumber.replace(/^(\d{2})(\d)/g, '($1) $2');
+      if (phoneNumberLength > 5) {
+        phoneNumber = phoneNumber.replace(/(\d)(\d{4})$/, '$1-$2');
+      } else {
+        phoneNumber = phoneNumber.replace(/(\d)(\d{3})$/, '$1-$2');
+      }
+    }
+
+    // Atualiza o valor do input
+    input.value = phoneNumber;
+  }
+
+// function formatCEP(input) {
+//     // Remove todos os caracteres que não sejam dígitos
+//     var cep = input.value.replace(/\D/g, '');
+
+//     // Verifica o tamanho do CEP
+//     var cepLength = cep.length;
+
+//     // Formatação do CEP
+//     if (cepLength > 0) {
+//       cep = cep.replace(/^(\d{5})(\d)/g, '$1-$2');
+//     }
+
+//     // Atualiza o valor do input
+//     input.value = cep;
+//   }
+
+const cep = document.querySelector('#cep')
+
+const options = {
+  method: 'GET',
+  mode: 'cors',
+  cache: 'default'
+}
 
 
+const showData = (result) => {
+  for (const campo in result){
+      if(document.querySelector("#"+campo)){
+          document.querySelector("#"+campo).value = result[campo];
+      }
+  }
+}
+
+cep.addEventListener("blur", (e) => {
+  let search = cep.value.replace("-", "");
+  console.log(search);
+ 
+  fetch(`https://viacep.com.br/ws/${search}/json/`, options)
+  .then(response => {
+      response.json()
+      .then(data => {
+          console.log(data)
+          showData(data)
+      })
+  })
+  .catch(e => {
+      console.log("ERRO: "+e)
+  })
+})
+
+// editar foto cliente
+
+const inputFile = document.querySelector('.picture-input')
+const pictureImage = document.querySelector('.picture-image')
+
+const pictureImageTxt = 'Escolha uma imagem'
+pictureImage.innerHTML = pictureImageTxt
+
+inputFile.addEventListener("change", function(e) {
+    const inputTarget = e.target
+    const file = inputTarget.files[0]
+
+    if (file) {
+     
+     const reader = new FileReader()
+
+     reader.addEventListener('load', function(e) {
+      const readerTarget = e.target
+      const img = document.createElement('img')
+      img.src = readerTarget.result
+      img.classList.add('rounded-circle', 'picture-profile-cliente')
+      pictureImage.innerHTML = ''
+      pictureImage.appendChild(img)
+     })
+
+     reader.readAsDataURL(file)
+
+    } else {
+      pictureImage.innerHTML = pictureImageTxt
+    }
+})
+
+// editar foto cliente
 
 
 

@@ -1,0 +1,40 @@
+/* query */
+@media screen and (max-width: 768px) {
+    #header .btn-custom {
+        margin-top: 1rem;
+    }
+
+    #modal-show-hide .modal-content {
+        min-width: 100% !important;
+    }
+
+    #text{
+        color: black!important;
+    }
+
+    #text-login{
+        font-size: 0.85rem;
+    }
+
+    #text-cadastro{
+        font-size: 0.65rem;
+        margin-top: 3.2rem!important;
+    }
+
+    #hero{
+        margin-top: 7rem;
+    }
+
+    #search-bar{
+        margin-top: 3rem;
+    }
+
+    #pre-cadastro-div{
+        margin-top: 4rem!important;
+    }
+
+    #pre-cadastro-div p{
+        font-size: 1.65rem;
+    }
+}
+/* query */
