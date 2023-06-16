@@ -13,7 +13,45 @@
 </head>
 
 <body>
-
+     <!-- USER-BAR -->
+     <div id="user-bar" class="position-sticky fixed-top bg-body-tertiary p-2">
+        <div class="d-flex justify-content-between justify-content-md-center ">
+            <ul class="nav nav-pills flex-row mb-auto text-center">
+                <li class="nav-item border shadow rounded m-1">
+                    <a href="perfil-cliente.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        aria-label="Home" data-bs-original-title="Home">
+                        <i class="bi bi-house-door" style="font-size: 20px;"></i>
+                    </a>
+                </li>
+                <li class="nav-item border shadow rounded m-1 bg-white bg-white">
+                    <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        aria-label="Timeline" data-bs-original-title="Timeline">
+                        <i class="bi bi-people" style="font-size: 20px;"></i>
+                    </a>
+                </li>
+                <li class="nav-item border shadow rounded m-1 bg-white" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" data-bs-original-title="Propostas">
+                    <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-show-hide">
+                        <i class=" bi bi-basket" style="font-size: 20px;"></i>
+                    </a>
+                </li>
+                <li class="nav-item border shadow rounded m-1 bg-white">
+                    <a href="editar-perfil-cliente.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        aria-label="Configuracoes" data-bs-original-title="Configurações">
+                        <i class="bi bi-gear-wide-connected" style="font-size: 20px;"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="border rounded nav nav-pills shadow m-1 bg-white">
+                <a href="home.html" class="nav-link d-flex align-items-center justify-content-center text-decoration-none"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Logout"
+                    data-bs-original-title="Sair">
+                    <img src="assets/cozinheiro.jpg" alt="mdo" width="24" height="24" class="rounded-circle">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- USER-BAR -->
     <div class="container-fluid bg-body-tertiary" id="editar-perfil-cliente">
         <div class="row mx-auto" id="colunas-perfil-cliente">
             <div class="col-lg-6 col-md-10 py-3 mx-auto">
