@@ -44,22 +44,6 @@ function formatPhoneNumber(input) {
     input.value = phoneNumber;
   }
 
-// function formatCEP(input) {
-//     // Remove todos os caracteres que não sejam dígitos
-//     var cep = input.value.replace(/\D/g, '');
-
-//     // Verifica o tamanho do CEP
-//     var cepLength = cep.length;
-
-//     // Formatação do CEP
-//     if (cepLength > 0) {
-//       cep = cep.replace(/^(\d{5})(\d)/g, '$1-$2');
-//     }
-
-//     // Atualiza o valor do input
-//     input.value = cep;
-//   }
-
 const cep = document.querySelector('#cep')
 
 const options = {
@@ -128,7 +112,94 @@ inputFile.addEventListener("change", function(e) {
 
 // editar foto cliente
 
+// editar tags
+   function formatarPalavras(event) {
+      
+      
 
+    if (event.keyCode == 32){
+      var campoFrase = document.getElementById('tags-profissional');
+      var frase = campoFrase.value;
+      var palavras = frase.split(' ');
+      var palavrasFormatadas = palavras.map(function(palavra) {
+        return '#' + palavra + ',';
+      }).join(' ');
+      var resultado = palavrasFormatadas
+      
+      campoFrase.value = resultado;
+    }
+      
+    }
+// editar tags
 
+let botao = document.querySelector('#adicionar-experiencia')
+botao.addEventListener('click', adicionarExperiencia)
+
+function adicionarExperiencia() {
+  
+  document.querySelector('#divPai').innerHTML = `<div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="local" class="form-control" id="local-profissional" placeholder="Local">
+                                <label for="local-profissional">Local</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="cargo" class="form-control" id="cargo-profissional" placeholder="Cargo">
+                                <label for="cargo-profissional">Cargo</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="inicio-profissional" placeholder="Início">
+                                <label for="inicio-profissional">Início</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="termino-profissional" placeholder="Término">
+                                <label for="termino-profissional">Término</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Descrição"
+                                    id="descricao-profissional"></textarea>
+                                <label for="descricao-profissional">Descrição</label>
+                            </div>
+                        </div>`
+
+}
+
+let botao2 = document.querySelector('#adicionar-certificado')
+botao2.addEventListener('click', adicionarCertificado)
+
+function adicionarCertificado(){
+  document.querySelector('#divPai2').innerHTML = `<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+  <div class="form-floating mb-3">
+      <input type="local" class="form-control" id="titulo-certificado" placeholder="Local">
+      <label for="titulo-certificado">Título</label>
+  </div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+  <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="termino-certificado" placeholder="Término">
+      <label for="termino-certificado">Término</label>
+  </div>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 ">
+  <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Descrição"
+          id="descricao-profissional"></textarea>
+      <label for="descricao-profissional">Descrição</label>
+  </div>
+</div>`
+}
 
 
