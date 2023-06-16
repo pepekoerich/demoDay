@@ -113,25 +113,23 @@ inputFile.addEventListener("change", function(e) {
 // editar foto cliente
 
 // editar tags
-   function formatarPalavras(event) {
-      
-      
+function formatWordsWithHashtag() {
+  const inputElement = document.getElementById("crie-tags");
+  const words = inputElement.value.trim().split(" ");
+  let formattedOutput = "";
 
-    if (event.keyCode == 32){
-      var campoFrase = document.getElementById('tags-profissional');
-      var frase = campoFrase.value;
-      var palavras = frase.split(' ');
-      var palavrasFormatadas = palavras.map(function(palavra) {
-        return '#' + palavra + ',';
-      }).join(' ');
-      var resultado = palavrasFormatadas
-      
-      campoFrase.value = resultado;
-    }
-      
-    }
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    const formattedWord = "#" + word + " ";
+    formattedOutput += formattedWord;
+  }
+
+  const resultContainer = document.getElementById("tags-display");
+  resultContainer.textContent = formattedOutput;
+}
 // editar tags
 
+// criar div exp profissional
 let botao = document.querySelector('#adicionar-experiencia')
 botao.addEventListener('click', adicionarExperiencia)
 
@@ -201,5 +199,5 @@ function adicionarCertificado(){
   </div>
 </div>`
 }
-
+// criar div exp profissional
 

@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <div class="container-fluid bg-body-tertiary" id="editar-perfil-cliente">
         <div class="row mx-auto" id="colunas-perfil-cliente">
             <div class="col-lg-6 col-md-10 py-3 mx-auto">
@@ -47,11 +46,19 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" placeholder="Crie suas Tags"
-                                    id="tags-profissional" onkeyup="formatarPalavras(event)"></textarea>
-                                <label for="tags-profissional">#Tags</label>
+                                    id="crie-tags" oninput="formatWordsWithHashtag()"></textarea>
+                                <label for="crie-tags">Digite suas Tags</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Crie suas Tags"
+                                    id="tags-display" disabled></textarea>
+                                <label for="tags-display">#Tags</label>
                             </div>
                         </div>
 
