@@ -135,7 +135,7 @@ botao.addEventListener('click', adicionarExperiencia)
 
 function adicionarExperiencia() {
   
-  document.querySelector('#divPai').innerHTML = `<div class="col-lg-2 col-md-3 col-sm-3 col-6">
+  document.querySelector('#divPai').innerHTML += `<div class="col-lg-2 col-md-3 col-sm-3 col-6">
                             <div class="form-floating mb-3">
                                 <input type="local" class="form-control" id="local-profissional" placeholder="Local">
                                 <label for="local-profissional">Local</label>
