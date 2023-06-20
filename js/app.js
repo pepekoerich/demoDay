@@ -23,7 +23,12 @@ function formatarValor(input) {
     input.value = `${inteiro},${decimal}`;
   }
 
+  function aceitarNumeros(input) {
+    input.value = input.value.replace(/\D/g, '');
+  }
+
   function formatarMesAno(element) {
+    aceitarNumeros(element)
     var valor = element.value;
     var valorFormatado = valor.replace(/^(\d{2})(\d{0,2})/, function(match, p1, p2) {
       if (p2) {
@@ -149,6 +154,7 @@ function formatWordsWithHashtag() {
 // editar experiencia
 let salvarExperiencia = document.querySelector('#salvar-experiencia')
 salvarExperiencia.addEventListener('click', adicionarExperiencia)
+
 function adicionarExperiencia(){
   let local = document.querySelector('#local-profissional')
   let cargo = document.querySelector('#cargo-profissional')
@@ -191,13 +197,10 @@ document.addEventListener("DOMContentLoaded", function() {
         break;
       }
     }
-
+    
     button.disabled = !camposPreenchidos;
-
-
   });
 
-  console.log('chegoufim')
 });
 // editar experiencia
 
@@ -229,7 +232,6 @@ function adicionarCertificado(){
   let titulo = document.querySelector('#titulo-certificado')
   let instituto = document.querySelector('#instituto-certificado')
   let dataFim = document.querySelector('#termino-certificado')
-  
   let container = document.querySelector('#div-certificado')
   container.innerHTML += `<div class="col-12 mb-3">
   <ol class="list-group list-group-numbered">
