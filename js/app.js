@@ -23,6 +23,23 @@ function formatarValor(input) {
     input.value = `${inteiro},${decimal}`;
   }
 
+  function formatarMesAno(element) {
+    var valor = element.value;
+    var valorFormatado = valor.replace(/^(\d{2})(\d{0,2})/, function(match, p1, p2) {
+      if (p2) {
+        return p1 + '/' + p2;
+      } else {
+        return p1;
+      }
+    });
+    element.value = valorFormatado;
+  }
+
+
+
+ 
+
+
 function formatPhoneNumber(input) {
     // Remove todos os caracteres que não sejam dígitos
     var phoneNumber = input.value.replace(/\D/g, '');
@@ -129,75 +146,108 @@ function formatWordsWithHashtag() {
 }
 // editar tags
 
-// criar div exp profissional
-let botao = document.querySelector('#adicionar-experiencia')
-botao.addEventListener('click', adicionarExperiencia)
-
-function adicionarExperiencia() {
-  
-  document.querySelector('#divPai').innerHTML += `<div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="local" class="form-control" id="local-profissional" placeholder="Local">
-                                <label for="local-profissional">Local</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="cargo" class="form-control" id="cargo-profissional" placeholder="Cargo">
-                                <label for="cargo-profissional">Cargo</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="inicio-profissional" placeholder="Início">
-                                <label for="inicio-profissional">Início</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="termino-profissional" placeholder="Término">
-                                <label for="termino-profissional">Término</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Descrição"
-                                    id="descricao-profissional"></textarea>
-                                <label for="descricao-profissional">Descrição</label>
-                            </div>
-                        </div>`
-
+// editar experiencia
+let salvarExperiencia = document.querySelector('#salvar-experiencia')
+salvarExperiencia.addEventListener('click', adicionarExperiencia)
+function adicionarExperiencia(){
+  let local = document.querySelector('#local-profissional')
+  let cargo = document.querySelector('#cargo-profissional')
+  let dataInicio = document.querySelector('#inicio-profissional')
+  let dataFim = document.querySelector('#termino-profissional')
+  let descricao = document.querySelector('#descricao-profissional')
+  let container = document.querySelector('#div-experiencia')
+  container.innerHTML += `<div class="col-12 mb-3">
+  <ol class="list-group list-group-numbered">
+      <li class="list-group-item d-flex align-items-start">
+          <div class="ms-2 me-auto">
+              <p class="fw-bold">${local.value} / ${cargo.value}</p>
+              <ul class="list-group-flush">
+                  <li class="">
+                      <p>${descricao.value}</p>
+                  </li>
+              </ul>
+          </div>
+          <span>De: ${dataInicio.value} À: ${dataFim.value}</span>
+      </li>
+  </ol>
+  </div>`
+   local.value = ''
+   cargo.value = ''
+   dataFim.value = ''
+   dataInicio.value = ''
+   descricao.value = ''
 }
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("formulario-experiencia");
+  var button = document.getElementById("salvar-experiencia");
 
-let botao2 = document.querySelector('#adicionar-certificado')
-botao2.addEventListener('click', adicionarCertificado)
+  form.addEventListener("input", function() {
+    var camposPreenchidos = true;
+    var inputs = form.querySelectorAll("input[required]");
+
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].value.trim() === '') {
+        camposPreenchidos = false;
+        break;
+      }
+    }
+
+    button.disabled = !camposPreenchidos;
+
+
+  });
+
+  console.log('chegoufim')
+});
+// editar experiencia
+
+// editar certificados
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("formulario-certificados");
+  var button = document.getElementById("salvar-certificados");
+
+  form.addEventListener("input", function() {
+    var camposPreenchidos = true;
+    var inputs = form.querySelectorAll("input[required]");
+
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].value.trim() === '') {
+        camposPreenchidos = false;
+        break;
+      }
+    }
+    button.disabled = !camposPreenchidos;
+  });
+
+  console.log('chegoufim')
+});
+
+let salvarCertificados = document.querySelector('#salvar-certificados')
+salvarCertificados.addEventListener('click', adicionarCertificado)
 
 function adicionarCertificado(){
-  document.querySelector('#divPai2').innerHTML = `<div class="col-lg-3 col-md-3 col-sm-3 col-6">
-  <div class="form-floating mb-3">
-      <input type="local" class="form-control" id="titulo-certificado" placeholder="Local">
-      <label for="titulo-certificado">Título</label>
-  </div>
-</div>
-
-<div class="col-lg-3 col-md-3 col-sm-3 col-6">
-  <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="termino-certificado" placeholder="Término">
-      <label for="termino-certificado">Término</label>
-  </div>
-</div>
-
-<div class="col-lg-6 col-md-6 col-sm-6 ">
-  <div class="form-floating mb-3">
-      <textarea class="form-control" placeholder="Descrição"
-          id="descricao-profissional"></textarea>
-      <label for="descricao-profissional">Descrição</label>
-  </div>
-</div>`
+  let titulo = document.querySelector('#titulo-certificado')
+  let instituto = document.querySelector('#instituto-certificado')
+  let dataFim = document.querySelector('#termino-certificado')
+  
+  let container = document.querySelector('#div-certificado')
+  container.innerHTML += `<div class="col-12 mb-3">
+  <ol class="list-group list-group-numbered">
+      <li class="list-group-item d-flex align-items-start">
+          <div class="ms-2 me-auto">
+              <p class="fw-bold">${titulo.value} </p>
+              <ul class="list-group-flush">
+                  <li class="">
+                      <p>${instituto.value}</p>
+                  </li>
+              </ul>
+          </div>
+          <span>Finalizado em: ${dataFim.value}</span>
+      </li>
+  </ol>
+  </div>`
+   titulo.value = ''
+   instituto.value = ''
+   dataFim.value = ''
 }
-// criar div exp profissional
-
+// editar certificados

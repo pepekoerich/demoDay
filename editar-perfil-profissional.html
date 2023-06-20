@@ -87,7 +87,23 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                            <div class="form-floating mb-3">
+                                <select class="form-select p-3" aria-label="Especialidade">
+                                    <option selected>Especialidades</option>
+                                    <option value="1">Auxiliar</option>
+                                    <option value="2">Barista</option>
+                                    <option value="3">Chef de Cozinha</option>
+                                    <option value="4">Confeiteiro</option>
+                                    <option value="5">Cozinheiro</option>
+                                    <option value="6">Garçom</option>
+                                    <option value="7">Mixologista</option>
+                                    <option value="8">Panificação</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12">
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" placeholder="Crie suas Tags" id="crie-tags"
                                     oninput="formatWordsWithHashtag()"></textarea>
@@ -95,7 +111,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12">
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" placeholder="Crie suas Tags" id="tags-display"
                                     disabled></textarea>
@@ -109,87 +125,31 @@
 
                         <!-- EXPERIENCIA-PROFISSIONAL -->
 
-                        <div class="col-lg-10 col-md-9 col-sm-6 col-12">
-                            <p class="fst-italic fw-semibold fs-5">Experiência Profissional</p>
+                        <div class="col-lg-10 col-md-9 col-sm-6 col-10">
+                            <p class="fst-italic fw-semibold fs-5">Experiência</p>
                         </div>
 
-                        <div
-                            class="col-lg-2 col-md-3 col-sm-6 col-6 col-12 d-flex justify-content-start justify-content-sm-end">
-                            <button type="button" class="btn btn-primary mb-3"
-                                id="adicionar-experiencia">Adicionar</button>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-2 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                                data-bs-target="#modal-experiencia" id="adicionar-experiencia">
+                                Adicionar
+                            </button>
                         </div>
 
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="local" class="form-control" id="local-profissional" placeholder="Local">
-                                <label for="local-profissional">Local</label>
-                            </div>
+                        <div id="div-experiencia" class="row mx-0 align-items-center justify-content-between p-0">
+
                         </div>
 
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="cargo" class="form-control" id="cargo-profissional" placeholder="Cargo">
-                                <label for="cargo-profissional">Cargo</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="inicio-profissional" placeholder="Início">
-                                <label for="inicio-profissional">Início</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="termino-profissional" placeholder="Término">
-                                <label for="termino-profissional">Término</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Descrição"
-                                    id="descricao-profissional"></textarea>
-                                <label for="descricao-profissional">Descrição</label>
-                            </div>
-                        </div>
-
-                        <div id="divPai" class="row mx-0 align-items-center justify-content-between p-0"></div>
-
-                        <div class="col-lg-10 col-md-9 col-sm-6 col-12">
+                        <div class="col-lg-10 col-md-9 col-sm-6 col-10">
                             <p class="fst-italic fw-semibold fs-5">Certificados</p>
                         </div>
 
-                        <div
-                            class="col-lg-2 col-md-3 col-sm-6 col-6 col-12 d-flex justify-content-start justify-content-sm-end">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-2 d-flex justify-content-end">
                             <button type="button" class="btn btn-primary mb-3"
-                                id="adicionar-certificado">Adicionar</button>
+                                id="adicionar-certificado" data-bs-toggle="modal" data-bs-target="#modal-certificados">Adicionar</button>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="local" class="form-control" id="titulo-certificado" placeholder="Local">
-                                <label for="titulo-certificado">Título</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="termino-certificado" placeholder="Término">
-                                <label for="termino-certificado">Término</label>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-6 ">
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Descrição"
-                                    id="descricao-profissional"></textarea>
-                                <label for="descricao-profissional">Descrição</label>
-                            </div>
-                        </div>
-
-                        <div id="divPai2" class="row mx-0 align-items-center justify-content-between p-0"></div>
+                        <div id="div-certificado" class="row mx-0 align-items-center justify-content-between p-0"></div>
 
                         <div class="col-lg-12 mb-3">
                             <hr>
@@ -269,6 +229,121 @@
             </div>
         </div>
     </div>
+
+    <!-- modal-experiencia -->
+    <div class="modal fade" id="modal-experiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Experiência Profissional</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id=formulario-experiencia>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="local" class="form-control" id="local-profissional" placeholder="Local"
+                                        required>
+                                    <label for="local-profissional">Local</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="cargo" class="form-control" id="cargo-profissional" placeholder="Cargo"
+                                        required>
+                                    <label for="cargo-profissional">Cargo</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input oninput="formatarMesAno(this)" type="text" class="form-control input-data"
+                                        id="inicio-profissional" placeholder="Início" maxlength="7" minlength="5"
+                                        required>
+                                    <label for="inicio-profissional">Início<small> mm/aaaa</small></label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input oninput="formatarMesAno(this)" type="text" class="form-control input-data"
+                                        id="termino-profissional" placeholder="Término" maxlength="7" minlength="5"
+                                        required>
+                                    <label for="termino-profissional">Término<small> mm/aaaa</small></label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" placeholder="Descrição" id="descricao-profissional"
+                                        style="height: 100px" required></textarea>
+                                    <label for="descricao-profissional">Descrição</label>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar">Fechar</button>
+                    <input type="button" value="Salvar" class="btn btn-primary" id="salvar-experiencia"
+                        data-bs-dismiss="modal" disabled></input>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal-experiencia -->
+    <!-- modal-certificados -->
+    <div class="modal fade" id="modal-certificados" tabindex="-1" aria-labelledby="modal-certificados" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modal-certificados">Certificados</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id=formulario-certificados>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="titulo-certificado" placeholder="Local"
+                                        required>
+                                    <label for="titulo-profissional">Título</label>
+                                </div>
+                            </div>
+                           
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input oninput="formatarMesAno(this)" type="text" class="form-control input-data"
+                                        id="termino-certificado" placeholder="Término" maxlength="7" minlength="5"
+                                        required>
+                                    <label for="termino-certificado">Finalizado<small> mm/aaaa</small></label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="instituto-certificado" placeholder="Local"
+                                        required>
+                                    <label for="instituto-certificado">Instituto</label>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="fechar">Fechar</button>
+                    <input type="button" value="Salvar" class="btn btn-primary" id="salvar-certificados"
+                        data-bs-dismiss="modal" disabled></input>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal-certificados -->
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
