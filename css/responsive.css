@@ -38,3 +38,9 @@
     }
 }
 /* query */
+
+@media screen and (max-width: 280px){
+    .sidebar-propostas{
+        display: none;
+    }
+}

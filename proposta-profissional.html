@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="">
     <!-- USER-BAR -->
-    <div id="user-bar" class="position-sticky fixed-top bg-body-tertiary border-bottom shadow-sm">
+    <div id="user-bar" class="bg-body-tertiary border-bottom shadow-sm">
         <div class="d-flex justify-content-between justify-content-md-center py-2 flex-wrap">
             <ul class="nav nav-pills flex-row mb-auto text-center">
                 <li class="nav-item border shadow rounded m-1">
@@ -31,7 +31,7 @@
                 </li>
                 <li class="nav-item border shadow rounded m-1 bg-white" data-bs-toggle="tooltip"
                     data-bs-placement="bottom" data-bs-original-title="Propostas">
-                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-show-hide">
+                    <a href="proposta-profissional.html" class="nav-link">
                         <i class=" bi bi-basket" style="font-size: 20px;"></i>
                     </a>
                 </li>
@@ -53,110 +53,503 @@
         </div>
     </div>
     <!-- USER-BAR -->
-    <!-- PROPOSTAS -->
-    <div class="container-fluid py-3 bg-body-tertiary">
 
+    <div class="container-fluid p-0">
         <div class="row">
-         
-            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
-                <div class="row align-items-center">
-                    <div class="col-12 col-sm-6 col-md-7             text-center">
-                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
-                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
-                        <div class="col py-2">
-                            
-                            <span class="badge btn text-bg-success">Aceita</span>
-                            
-                        </div>
-                    </div>
+            <div class="col">
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills text-bg-dark shadow-lg py-3 p-2 sidebar-propostas" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical" style="height: 100vh; width: 200px;">
+                        
+                        <a class="nav-link active text-start text-white mb-3" id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">
+                            Proprostas
+                        </a>
+                        
+                        <a class="nav-link text-start mb-3 text-white" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">
+                            Negociando
+                        </a>
 
-                    <div class="col-12 col-sm-6 col-md-5 mt-3">
-                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
-                                Cliente</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
-                                dolor sit amet consectetur adipisicing elit. Accusantium atque
-                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
-                                veritatis.</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
-                        </p>
-                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
-                                class="fst-normal fw-light">Casamento</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
-                                Florianópolis - Ingleses</span></p>
-                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
-                                5.500</span></p>
+                        <button class="nav-link text-start mb-3 text-white" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                            aria-selected="false">
+                            Aceitas
+                        </button>
+
+                        <button class="nav-link text-start mb-3 text-white" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                            aria-selected="false">
+                            Negadas
+                        </button>
+
+                    </div>
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab" tabindex="0">
+                          
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto  border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7  text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            <span class="badge btn text-bg-success">Aceitar</span>
+                                            <span class="badge btn text-bg-secondary">Negociar</span>
+                                            <span class="badge btn text-bg-danger">Negar</span>
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            <span class="badge btn text-bg-success">Aceitar</span>
+                                            <span class="badge btn text-bg-secondary">Negociar</span>
+                                            <span class="badge btn text-bg-danger">Negar</span>
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            <span class="badge btn text-bg-success">Aceitar</span>
+                                            <span class="badge btn text-bg-secondary">Negociar</span>
+                                            <span class="badge btn text-bg-danger">Negar</span>
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                                  
+
+                        </div>
+
+                                
+                       
+
+
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab" tabindex="0">
+
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-secondary">Pendente</span>
+                                            
+                                            
+                                        </div>
+
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-secondary">Pendente de confirmação</span>
+                                            
+                                            
+                                        </div>
+
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-primary">Confirmar</span>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            <span class="badge btn text-bg-success">Aceitar</span>
+                                            <span class="badge btn text-bg-secondary">Negociar</span>
+                                            <span class="badge btn text-bg-danger">Negar</span>
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+                            aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                        
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-success">Aceita</span>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-success">Aceita</span>                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-success">Aceita</span>                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                            aria-labelledby="v-pills-messages-tab" tabindex="0">
+                        
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-danger">Negada</span>                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-danger">Negada</span>                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-sm-6 col-md-7             text-center">
+                                        <img src="assets/cleinte-mulher.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
+                                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
+                                        <div class="col py-2">
+                                            
+                                            
+                                            <span class="badge btn text-bg-danger">Negada</span>                                            
+                                            
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-12 col-sm-6 col-md-5 mt-3">
+                                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
+                                                Cliente</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Accusantium atque
+                                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
+                                                veritatis.</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
+                                        </p>
+                                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
+                                                class="fst-normal fw-light">Casamento</span></p>
+                                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
+                                                Florianópolis - Ingleses</span></p>
+                                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
+                                                5.500</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                            aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
-                <div class="row align-items-center">
-                    <div class="col-12 col-sm-6 col-md-7             text-center">
-                        <img src="assets/cozinheiro.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
-                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
-                        <div class="col py-2">
-                            <span class="badge btn text-bg-danger">Negada</span>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-5 mt-3">
-                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
-                                Cliente</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
-                                dolor sit amet consectetur adipisicing elit. Accusantium atque
-                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
-                                veritatis.</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
-                        </p>
-                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
-                                class="fst-normal fw-light">Casamento</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
-                                Florianópolis - Ingleses</span></p>
-                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
-                                5.500</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-11 col-sm-9 col-md-10 col-lg-7 col-xl-7 mx-auto border-bottom p-3">
-                <div class="row align-items-center">
-                    <div class="col-12 col-sm-6 col-md-7             text-center">
-                        <img src="assets/seja-profissional.jpg" alt="profile-picture" class="img-thumbnail rounded-circle"
-                            style="width: 200px; height: 200px;" id="image-perfil-profissional">
-                        <div class="col py-2">
-                            <span class="badge btn text-bg-secondary">Pendente</span>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-5 mt-3">
-                        <p class="mb-1 fst-italic fw-semibold">Proposta de: <span class="fst-normal fw-light">Nome
-                                Cliente</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Descrição: <span class="fst-normal fw-light">Lorem ipsum
-                                dolor sit amet consectetur adipisicing elit. Accusantium atque
-                                temporibus ex officia, numquam doloribus molestias quia tenetur doloremque
-                                veritatis.</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Data: <span class="fst-normal fw-light">27/03/2024</span>
-                        </p>
-                        <p class="mb-1 fst-italic fw-semibold">Segmento: <span
-                                class="fst-normal fw-light">Casamento</span></p>
-                        <p class="mb-1 fst-italic fw-semibold">Local: <span class="fst-normal fw-light">SC -
-                                Florianópolis - Ingleses</span></p>
-                        <p class="fst-italic fw-semibold">Valor Proposta: <span class="fst-normal fw-light">R$
-                                5.500</span></p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
-    </div>
-    </div>
 
-
-    </div>
-
-
-    <!-- PROPOSTAS -->
 
 
 
