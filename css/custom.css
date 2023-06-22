@@ -215,3 +215,9 @@ small {
     margin: 0rem;
 }
 /* TELA-PROPOSTA-PROFISSIONAL */
+
+.nav-pills {
+    --bs-nav-pills-border-radius: var(--bs-border-radius);
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: #3F3F40;
+}

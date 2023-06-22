@@ -40,11 +40,6 @@ function formatarValor(input) {
     element.value = valorFormatado;
   }
 
-
-
- 
-
-
 function formatPhoneNumber(input) {
     // Remove todos os caracteres que não sejam dígitos
     var phoneNumber = input.value.replace(/\D/g, '');
@@ -66,13 +61,14 @@ function formatPhoneNumber(input) {
     input.value = phoneNumber;
   }
 
-const cep = document.querySelector('#cep')
+const cep = document.getElementById('cep')
 
 const options = {
   method: 'GET',
   mode: 'cors',
   cache: 'default'
 }
+
 
 
 const showData = (result) => {
@@ -96,7 +92,7 @@ cep.addEventListener("blur", (e) => {
       })
   })
   .catch(e => {
-      console.log("ERRO: "+e)
+      console.log("ERRO: "+ e)
   })
 })
 
@@ -177,11 +173,11 @@ function adicionarExperiencia(){
       </li>
   </ol>
   </div>`
-   local.value = ''
-   cargo.value = ''
-   dataFim.value = ''
-   dataInicio.value = ''
-   descricao.value = ''
+   local.value = null
+   cargo.value = null
+   dataFim.value = null
+   dataInicio.value = null
+   descricao.value = null
 }
 document.addEventListener("DOMContentLoaded", function() {
   var form = document.getElementById("formulario-experiencia");
@@ -248,8 +244,15 @@ function adicionarCertificado(){
       </li>
   </ol>
   </div>`
-   titulo.value = ''
-   instituto.value = ''
-   dataFim.value = ''
+   titulo.value = null
+   instituto.value = null
+   dataFim.value = null
 }
 // editar certificados
+
+function atualizarValor() {
+  var rangeInput = document.getElementById("rangeInput");
+  var valorSelecionado = document.getElementById("valorSelecionado");
+
+  valorSelecionado.innerHTML = rangeInput.value + ' Km';
+}
