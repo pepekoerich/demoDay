@@ -38,15 +38,3 @@
     }
 }
 /* query */
-
-@media screen and (max-width: 280px){
-    .sidebar-propostas{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 390px){
-    #timeline .sidebar-timeline{
-        width: 95vw!important;
-    }
-}
