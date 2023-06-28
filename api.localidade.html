@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API do IBGE - Localidades</title>
+</head>
+<body>
+  <h1>API do IBGE - Localidades</h1>
+  
+  <label for="av">Selecione uma UF:</label>
+  <select id="av" onchange="buscarMunicipios()">
+    <option value="">Selecione</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AM">Amazonas</option>
+    <!-- Adicione as demais UF conforme sua necessidade -->
+  </select>
+  
+  <label for="municipio">Município:</label>
+  <select id="municipio" onchange="buscarBairros()"></select>
+  
+  <label for="bairro">Bairro:</label>
+  <select id="bairro"></select>
+  
+  <script>
+    function buscarMunicipios() {
+      var ufSelecionada = document.getElementById("av").value;
+      
+      if (ufSelecionada === "") {
+        limparSelect("municipio");
+        limparSelect("bairro");
+        return;
+      }
+      
+      var url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufSelecionada}/municipios`;
+      
+      fetch(url)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          exibirMunicipios(data);
+        })
+        .catch(function(error) {
+          console.log('Ocorreu um erro:', error);
+        });
+    }
+    
+    function exibirMunicipios(municipios) {
+      var municipioSelect = document.getElementById("municipio");
+      
+      limparSelect("municipio");
+      limparSelect("bairro");
+      
+      if (municipios.length === 0) {
+        municipioSelect.disabled = true;
+        return;
+      }
+      
+      municipioSelect.disabled = false;
+      
+      for (var i = 0; i < municipios.length; i++) {
+        var option = document.createElement("option");
+        option.value = municipios[i].id;
+        option.textContent = municipios[i].nome;
+        municipioSelect.appendChild(option);
+      }
+    }
+    
+    function buscarBairros() {
+      var municipioSelecionado = document.getElementById("municipio").value;
+      
+      if (municipioSelecionado === "") {
+        limparSelect("bairro");
+        return;
+      }
+      
+      var url = `https://servicodados.ibge.gov.br/api/v1/localidades/municipios/${municipioSelecionado}/distritos`;
+      
+      fetch(url)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          exibirBairros(data);
+        })
+        .catch(function(error) {
+          console.log('Ocorreu um erro:', error);
+        });
+    }
+    
+    function exibirBairros(bairros) {
+      var bairroSelect = document.getElementById("bairro");
+      
+      limparSelect("bairro");
+      
+      if (bairros.length === 0) {
+        bairroSelect.disabled = true;
+        return;
+      }
+      
+      bairroSelect.disabled = false;
+      
+      for (var i = 0; i < bairros.length; i++) {
+        var option = document.createElement("option");
+        option.value = bairros[i].id;
+        option.textContent = bairros[i].nome;
+        bairroSelect.appendChild(option);
+      }
+    }
+    
+    function limparSelect(idSelect) {
+      var select = document.getElementById(idSelect);
+      select.innerHTML = "";
+      select.disabled = true;
+      
+      var option = document.createElement("option");
+      option.value = "";
+      option.textContent = "Selecione";
+      select.appendChild(option);
+    }
+  </script>
+</body>
+</html>

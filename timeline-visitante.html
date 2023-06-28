@@ -16,14 +16,28 @@
 
     <!-- HEADER -->
     <header id="header">
-        <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom shadow-sm">
-            <div class="container-fluid">
-                <a href="home.html" class="navbar-brand">
-                    <img src="assets/logo-legal.png" alt="logo" class="img-fluid"
-                        style="width: 50px; height: auto; border-radius: 50%;">Taste.Hub
-                </a>
+
+        <div class="container-fluid p-1 bg-body-tertiary shadow-sm">
+            <div class="row mx-auto">
+                <div class="col-4 col-lg-3 d-flex justify-content-start">
+                    <a href="home.html" class="navbar-brand">
+                        <img src="assets/logo-legal.png" alt="logo" class="img-fluid"
+                            style="width: 50px; height: auto; border-radius: 50%;">Taste.Hub
+                    </a>
+                </div>
+                <div class="col-7">
+                    <form action="">
+                        <div class="input-group p-2">
+                            <div class="input-group-text bg-white">
+                                <i class="bi bi-search "></i>
+                            </div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup"
+                                placeholder="Pesquisar...">
+                        </div>
+                    </form>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
     <!-- HEADER -->
     <!-- NAV-PESQUISA -->
@@ -96,7 +110,10 @@
 
 
 
-        <main class="overflow-hidden mt-sm-4">
+        <main class="overflow-hidden mt-sm-3">
+
+
+
             <div class="col-10 col-md-8 mx-auto mb-3">
                 <div class="row border p-3 rounded bg-body-tertiary flex-wrap-reverse shadow">
                     <div class="col-12 col-sm-12 col-md-6 mx-auto text-center text-md-start mx-md-0">
@@ -236,7 +253,7 @@
                     <div class="modal-body py-0">
                         <p>Conte um pouco mais sobre o seu evento:</p>
                         <div class="row">
-                            <form action="/proposta" method="POST" class="form-group">
+                            <form action="" method="POST" class="form-group">
                                 <div class="mb-3 mt-3">
                                     <label for="date" class="form-label">Data:</label>
                                     <input type="date" class="form-control" id="date" required>
@@ -255,29 +272,47 @@
 
                                 <div class="row justify-content-lg-around" id="localidade">
                                     <div class="col-md-2 col-4 mt-1 py-1">
-                                        <label for="estado" class="form-label">Estado</label>
-                                        <select class="form-select" id="estado" required>
-                                            <option>SC</option>
-                                            <option>PR</option>
-                                            <option>RS</option>
+                                        <label for="uf-proposta" class="form-label">Estado</label>
+                                        <select class="form-select" id="uf-proposta" onchange="buscarMunicipios()" required>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
                                         </select>
                                     </div>
+
                                     <div class="col-md-5 col-9 mt-1 py-1">
-                                        <label for="cidade" class="form-label">Cidade</label>
-                                        <select class="form-select" id="cidade" required>
-                                            <option>Florianópolis</option>
-                                            <option>São José</option>
-                                            <option>Biguaçu</option>
-                                            <option>Palhoça</option>
+                                        <label for="municipio-proposta" class="form-label">Cidade</label>
+                                        <select class="form-select" id="municipio-proposta" onchange="buscarBairros()" required>
                                         </select>
                                     </div>
+
                                     <div class="col-md-5 col-9 mt-1 py-1">
-                                        <label for="bairro" class="form-label">Bairro</label>
-                                        <select class="form-select" id="bairro" required>
-                                            <option>Agronômica</option>
-                                            <option>Trindade</option>
-                                            <option>Itacorubi</option>
-                                        </select>
+                                        <label for="bairro-proposta" class="form-label">Bairro</label>
+                                        <input class="form-control" id="bairro-proposta" required>
+                                        </input>
                                     </div>
                                 </div>
 

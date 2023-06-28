@@ -256,3 +256,103 @@ function atualizarValor() {
 
   valorSelecionado.innerHTML = rangeInput.value + ' Km';
 }
+
+// js app file
+
+
+function buscarMunicipios() {
+  var ufSelecionada = document.getElementById("uf-proposta").value;
+  
+  if (ufSelecionada === "") {
+    limparSelect("municipio-proposta");
+    limparSelect("bairro-proposta");
+    return;
+  }
+  
+  var url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufSelecionada}/municipios`;
+  
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      exibirMunicipios(data);
+    })
+    .catch(function(error) {
+      console.log('Ocorreu um erro:', error);
+    });
+}
+
+function exibirMunicipios(municipios) {
+  var municipioSelect = document.getElementById("municipio-proposta");
+  
+  limparSelect("municipio-proposta");
+  limparSelect("bairro-proposta");
+  
+  if (municipios.length === 0) {
+    municipioSelect.disabled = true;
+    return;
+  }
+  
+  municipioSelect.disabled = false;
+  
+  for (var i = 0; i < municipios.length; i++) {
+    var option = document.createElement("option");
+    option.value = municipios[i].id;
+    option.textContent = municipios[i].nome;
+    municipioSelect.appendChild(option);
+  }
+}
+
+function buscarBairros() {
+  var municipioSelecionado = document.getElementById("municipio-proposta").value;
+  
+  if (municipioSelecionado === "") {
+    limparSelect("bairro-proposta");
+    return;
+  }
+  
+  var url = `https://servicodados.ibge.gov.br/api/v1/localidades/municipios/${municipioSelecionado}/distritos`;
+  
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      exibirBairros(data);
+    })
+    .catch(function(error) {
+      console.log('Ocorreu um erro:', error);
+    });
+}
+
+function exibirBairros(bairros) {
+  var bairroSelect = document.getElementById("bairro-proposta");
+  
+  limparSelect("bairro-proposta");
+  
+  if (bairros.length === 0) {
+    bairroSelect.disabled = true;
+    return;
+  }
+  
+  bairroSelect.disabled = false;
+  
+  for (var i = 0; i < bairros.length; i++) {
+    var option = document.createElement("option");
+    option.value = bairros[i].id;
+    option.textContent = bairros[i].nome;
+    bairroSelect.appendChild(option);
+  }
+}
+
+function limparSelect(idSelect) {
+  var select = document.getElementById(idSelect);
+  select.innerHTML = "";
+  select.disabled = true;
+  
+  var option = document.createElement("option");
+  option.value = "";
+  option.textContent = "Selecione";
+  select.appendChild(option);
+}
