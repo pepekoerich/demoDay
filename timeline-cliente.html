@@ -110,8 +110,8 @@
                             </a>
                         </li>
                         <li class="nav-item border shadow rounded m-1 bg-white">
-                            <a href="timeline-cliente.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                aria-label="Timeline" data-bs-original-title="Timeline">
+                            <a href="timeline-cliente.html" class="nav-link active" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" aria-label="Timeline" data-bs-original-title="Timeline">
                                 <i class="bi bi-people" style="font-size: 20px;"></i>
                             </a>
                         </li>
@@ -264,7 +264,6 @@
         </main>
         <!-- TIMELINE -->
     </div>
-
     <!-- MODAL -->
     <div class="modal fade border-0" id="modal-show-hide" tabindex="-1 bg-white" aria-labelledby="legalLabel"
         aria-hidden="true">
@@ -279,7 +278,7 @@
                     <div class="modal-body py-0">
                         <p>Conte um pouco mais sobre o seu evento:</p>
                         <div class="row">
-                            <form action="/proposta" method="POST" class="form-group">
+                            <form action="" method="POST" class="form-group">
                                 <div class="mb-3 mt-3">
                                     <label for="date" class="form-label">Data:</label>
                                     <input type="date" class="form-control" id="date" required>
@@ -298,29 +297,49 @@
 
                                 <div class="row justify-content-lg-around" id="localidade">
                                     <div class="col-md-2 col-4 mt-1 py-1">
-                                        <label for="estado" class="form-label">Estado</label>
-                                        <select class="form-select" id="estado" required>
-                                            <option>SC</option>
-                                            <option>PR</option>
-                                            <option>RS</option>
+                                        <label for="uf-proposta" class="form-label">Estado</label>
+                                        <select class="form-select" id="uf-proposta" onchange="buscarMunicipios()"
+                                            required>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
                                         </select>
                                     </div>
+
                                     <div class="col-md-5 col-9 mt-1 py-1">
-                                        <label for="cidade" class="form-label">Cidade</label>
-                                        <select class="form-select" id="cidade" required>
-                                            <option>Florianópolis</option>
-                                            <option>São José</option>
-                                            <option>Biguaçu</option>
-                                            <option>Palhoça</option>
+                                        <label for="municipio-proposta" class="form-label">Cidade</label>
+                                        <select class="form-select" id="municipio-proposta" onchange="buscarBairros()"
+                                            required>
                                         </select>
                                     </div>
+
                                     <div class="col-md-5 col-9 mt-1 py-1">
-                                        <label for="bairro" class="form-label">Bairro</label>
-                                        <select class="form-select" id="bairro" required>
-                                            <option>Agronômica</option>
-                                            <option>Trindade</option>
-                                            <option>Itacorubi</option>
-                                        </select>
+                                        <label for="bairro-proposta" class="form-label">Bairro</label>
+                                        <input class="form-control" id="bairro-proposta" required>
+                                        </input>
                                     </div>
                                 </div>
 
@@ -334,12 +353,14 @@
                                         oninput="formatarValor(this)" placeholder="Digite um valor contábil em reais"
                                         required>
                                 </div>
+                                <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
+                                    <input type="submit" value="Enviar Proposta" name="proposta"
+                                        class="btn btn-primary fs-5">
+                                </div>
                             </form>
                         </div>
                     </div>
-                    <div class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0">
-                        <input type="submit" value="Enviar Proposta" name="proposta" class="btn btn-primary fs-5">
-                    </div>
+
                 </div>
             </div>
         </div>
